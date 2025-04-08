@@ -1,0 +1,25 @@
+# dependencies
+/node_modules
+
+# Next.js build output
+/.next
+
+# System files
+.DS_Store
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# env files (if you have any secrets)
+/.env
+.env.local
+.env.production
+.env.development
+
+# Output
+/out
+
+# Typescript
+*.tsbuildinfo
