@@ -1,67 +1,67 @@
-import type { Metadata, Viewport } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
-import './globals.css'
-import { ThemeProvider } from 'next-themes'
-import { CustomCursor } from '@/components/ui/custom-cursor'
-import { MusicPlayer } from '@/components/ui/music-player'
-import { initCursorGlow } from '@/lib/utils'
+import type { Metadata, Viewport } from "next";
+import { Geist, Geist_Mono } from "next/font/google";
+import "./globals.css";
+import { ThemeProvider } from "next-themes";
+import { CustomCursor } from "@/components/ui/custom-cursor";
+import { MusicPlayer } from "@/components/ui/music-player";
+import { initCursorGlow } from "@/lib/utils";
 
 export const viewport: Viewport = {
-  width: 'device-width',
+  width: "device-width",
   initialScale: 1,
-  themeColor: '#ffffff',
-}
+  themeColor: "#ffffff",
+};
 
 export const metadata: Metadata = {
-  title: 'adit - frontend developer',
+  title: "tanish - frontend developer",
   description:
-    'I am a frontend developer who loves to craft beautiful and performant websites.',
+    "I am a frontend developer who loves to craft beautiful and performant websites.",
   icons: {
     icon: [
       {
-        media: '(prefers-color-scheme: light)',
-        url: '/memoji-1.png',
-        href: '/memoji-1.png',
+        media: "(prefers-color-scheme: light)",
+        url: "/memoji-1.png",
+        href: "/memoji-1.png",
       },
       {
-        media: '(prefers-color-scheme: dark)',
-        url: '/memoji-1.png',
-        href: '/memoji-1.png',
+        media: "(prefers-color-scheme: dark)",
+        url: "/memoji-1.png",
+        href: "/memoji-1.png",
       },
     ],
   },
   openGraph: {
-    title: 'adit — frontend developer',
-    type: 'website',
+    title: "adit — frontend developer",
+    type: "website",
     images:
-      'https://ucarecdn.com/b624aa7d-978f-44ef-8e45-bf3c12f1e846/memojilaptop1.png', // Same image as above
-    url: 'https://adityahimaone.tech/',
+      "https://ucarecdn.com/b624aa7d-978f-44ef-8e45-bf3c12f1e846/memojilaptop1.png", // Same image as above
+    url: "https://adityahimaone.tech/",
     description: "adit's personal website",
   },
   twitter: {
-    card: 'summary_large_image',
-    site: '@adityahimaone',
-    title: 'adit — frontend developer',
+    card: "summary_large_image",
+    site: "@adityahimaone",
+    title: "adit — frontend developer",
     description: "adit's personal website",
     images:
-      'https://ucarecdn.com/b624aa7d-978f-44ef-8e45-bf3c12f1e846/memojilaptop1.png', // Same image as above
+      "https://ucarecdn.com/b624aa7d-978f-44ef-8e45-bf3c12f1e846/memojilaptop1.png", // Same image as above
   },
-}
+};
 
 const geist = Geist({
-  variable: '--font-geist',
-  subsets: ['latin'],
-})
+  variable: "--font-geist",
+  subsets: ["latin"],
+});
 
 const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
-})
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
@@ -81,5 +81,5 @@ export default function RootLayout({
         </ThemeProvider>
       </body>
     </html>
-  )
+  );
 }
