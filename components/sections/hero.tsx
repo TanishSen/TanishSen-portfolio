@@ -1,20 +1,20 @@
-'use client'
-import { useEffect, useRef, useState } from 'react'
-import { motion, useInView, useAnimation } from 'framer-motion'
-import Image from 'next/image'
+"use client";
+import { useEffect, useRef, useState } from "react";
+import { motion, useInView, useAnimation } from "framer-motion";
+import Image from "next/image";
 
 export function HeroSection() {
-  const controls = useAnimation()
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: false, amount: 0.2 })
-  const [isMounted, setIsMounted] = useState(false)
+  const controls = useAnimation();
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: false, amount: 0.2 });
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
-    setIsMounted(true)
+    setIsMounted(true);
     if (isInView) {
-      controls.start('visible')
+      controls.start("visible");
     }
-  }, [controls, isInView])
+  }, [controls, isInView]);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -25,7 +25,7 @@ export function HeroSection() {
         delayChildren: 0.3,
       },
     },
-  }
+  };
 
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
@@ -33,12 +33,12 @@ export function HeroSection() {
       y: 0,
       opacity: 1,
       transition: {
-        type: 'spring',
+        type: "spring",
         stiffness: 100,
         damping: 10,
       },
     },
-  }
+  };
 
   return (
     <section
@@ -50,7 +50,7 @@ export function HeroSection() {
         className="mx-auto grid max-w-screen-xl grid-cols-1 gap-6 px-4 sm:gap-12 sm:px-6 md:grid-cols-2 md:items-center lg:px-8"
         variants={containerVariants}
         initial="hidden"
-        animate={isMounted ? controls : 'hidden'}
+        animate={isMounted ? controls : "hidden"}
       >
         <div className="order-2 mt-3 sm:mt-8 md:order-1 md:mt-0">
           <motion.div
@@ -66,7 +66,7 @@ export function HeroSection() {
           >
             <span className="text-gradient from-primary to-secondary">
               Canvas
-            </span>{' '}
+            </span>{" "}
             <span className="relative inline-block">
               Meets
               <motion.svg
@@ -78,7 +78,7 @@ export function HeroSection() {
                 preserveAspectRatio="none"
                 initial={{ pathLength: 0 }}
                 animate={isMounted ? { pathLength: 1 } : { pathLength: 0 }}
-                transition={{ delay: 1, duration: 1.5, ease: 'easeInOut' }}
+                transition={{ delay: 1, duration: 1.5, ease: "easeInOut" }}
               >
                 <path
                   d="M0,5 C25,0 75,10 100,5"
@@ -100,7 +100,7 @@ export function HeroSection() {
                   </linearGradient>
                 </defs>
               </motion.svg>
-            </span>{' '}
+            </span>{" "}
             <span className="text-gradient from-secondary to-primary">
               Code
             </span>
@@ -120,40 +120,13 @@ export function HeroSection() {
               }}
               initial="hidden"
               animate="visible"
-              transition={{ duration: 0.6, delay: 0.2 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
             >
-              Designs that echo, bold and bright
-              <motion.span
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.3 }}
-              >
-                .
-              </motion.span>
+              Tried one thing, then tried some more
               <motion.span
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.4 }}
-              >
-                .
-              </motion.span>
-            </motion.p>
-
-            <motion.p
-              className="md:text-l mb-3 font-serif text-xl leading-relaxed tracking-wide text-white italic"
-              variants={{
-                hidden: { opacity: 0, y: 20 },
-                visible: { opacity: 1, y: 0 },
-              }}
-              initial="hidden"
-              animate="visible"
-              transition={{ duration: 0.6, delay: 0.4 }}
-            >
-              Code that flows — not always right
-              <motion.span
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.5 }}
               >
                 .
               </motion.span>
@@ -167,6 +140,33 @@ export function HeroSection() {
             </motion.p>
 
             <motion.p
+              className="md:text-l mb-15 font-serif text-xl leading-relaxed tracking-wide text-white italic"
+              variants={{
+                hidden: { opacity: 0, y: 20 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              initial="hidden"
+              animate="visible"
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
+              Now I make cool stuff you won’t ignore
+              <motion.span
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.6 }}
+              >
+                .
+              </motion.span>
+              <motion.span
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.8 }}
+              >
+                .
+              </motion.span>
+            </motion.p>
+
+            {/* <motion.p
               className="md:text-l mb-3 font-serif text-xl leading-relaxed tracking-wide text-white italic"
               variants={{
                 hidden: { opacity: 0, y: 20 },
@@ -225,7 +225,7 @@ export function HeroSection() {
               >
                 .
               </motion.span>
-            </motion.p>
+            </motion.p> */}
           </motion.div>
 
           <motion.div
@@ -336,7 +336,7 @@ export function HeroSection() {
               transition={{
                 duration: 20,
                 repeat: Infinity,
-                ease: 'linear',
+                ease: "linear",
               }}
             />
 
@@ -344,8 +344,8 @@ export function HeroSection() {
               <motion.div
                 className="h-full w-full rounded-full bg-zinc-100 p-4 shadow-inner dark:bg-zinc-800"
                 initial={{ scale: 1 }}
-                whileHover={isMounted ? 'zooming' : undefined}
-                whileTap={isMounted ? 'zooming' : undefined}
+                whileHover={isMounted ? "zooming" : undefined}
+                whileTap={isMounted ? "zooming" : undefined}
                 variants={{
                   zooming: {
                     scale: [1, 1.2, 0.9, 1],
@@ -353,8 +353,8 @@ export function HeroSection() {
                       scale: {
                         duration: 4,
                         repeat: Infinity,
-                        repeatType: 'loop',
-                        ease: 'easeInOut',
+                        repeatType: "loop",
+                        ease: "easeInOut",
                       },
                     },
                   },
@@ -413,7 +413,7 @@ export function HeroSection() {
                 duration: 2.5,
                 repeat: Infinity,
                 repeatDelay: 1,
-                ease: 'easeOut',
+                ease: "easeOut",
               }}
             >
               ♫
@@ -438,7 +438,7 @@ export function HeroSection() {
                 repeat: Infinity,
                 repeatDelay: 0.5,
                 times: [0, 0.2, 0.4, 0.6, 1],
-                ease: 'easeInOut',
+                ease: "easeInOut",
               }}
             >
               ♬
@@ -479,8 +479,8 @@ export function HeroSection() {
               transition={{
                 duration: 3.5,
                 repeat: Infinity,
-                repeatType: 'loop',
-                ease: 'easeInOut',
+                repeatType: "loop",
+                ease: "easeInOut",
               }}
             >
               𝄞
@@ -504,7 +504,7 @@ export function HeroSection() {
                 duration: 2,
                 repeat: Infinity,
                 repeatDelay: 1,
-                ease: 'backOut',
+                ease: "backOut",
               }}
             >
               ♯
@@ -513,5 +513,5 @@ export function HeroSection() {
         </motion.div>
       </motion.div>
     </section>
-  )
+  );
 }

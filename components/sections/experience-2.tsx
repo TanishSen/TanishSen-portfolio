@@ -1,15 +1,15 @@
-'use client'
-import { useRef } from 'react'
-import { motion, useInView } from 'motion/react'
-import Image from 'next/image'
+"use client";
+import { useRef } from "react";
+import { motion, useInView } from "motion/react";
+import Image from "next/image";
 
 const timelineData = [
   {
-    title: 'APR 2024 - SEP 2024',
+    title: "APR 2024 - SEP 2024 ",
     content: (
       <div>
         <h3 className="mb-1 flex flex-col text-2xl font-medium text-zinc-800 md:flex-row md:items-baseline md:gap-2 dark:text-zinc-200">
-          Frontend Developer
+          Frontend Developer Intern
           <span className="text-base font-light text-zinc-400 md:text-lg">
             Part Time
           </span>
@@ -37,11 +37,11 @@ const timelineData = [
     ),
   },
   {
-    title: 'OCT 2022 - PRESENT',
+    title: "OCT 2022 - PRESENT",
     content: (
       <div>
         <h3 className="mb-1 text-2xl font-medium text-zinc-800 dark:text-zinc-200">
-          Frontend Developer
+          Frontend Developer Intern
         </h3>
         <p className="text-secondary mb-3 text-lg">
           Fast 8 People Hub - Jakarta, Indonesia
@@ -72,7 +72,7 @@ const timelineData = [
     ),
   },
   {
-    title: 'JUN 2022 - AUG 2024',
+    title: "JUN 2022 - AUG 2024",
     content: (
       <div>
         <h3 className="mb-1 text-2xl font-medium text-zinc-800 dark:text-zinc-200">
@@ -106,8 +106,8 @@ const timelineData = [
   {
     title: (
       <span>
-        <span className="text-secondary">V</span>ocational{' '}
-        <span className="text-secondary">O</span>nline{' '}
+        <span className="text-secondary">V</span>ocational{" "}
+        <span className="text-secondary">O</span>nline{" "}
         <span className="text-secondary">C</span>ourses
       </span>
     ),
@@ -181,11 +181,11 @@ const timelineData = [
       </div>
     ),
   },
-]
+];
 
 export function Experience2Section() {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: false, amount: 0.1 })
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: false, amount: 0.1 });
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -195,7 +195,7 @@ export function Experience2Section() {
         staggerChildren: 0.2,
       },
     },
-  }
+  };
 
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
@@ -203,12 +203,12 @@ export function Experience2Section() {
       y: 0,
       opacity: 1,
       transition: {
-        type: 'spring',
+        type: "spring",
         stiffness: 100,
         damping: 10,
       },
     },
-  }
+  };
 
   return (
     <section id="experience" className="py-16" ref={ref}>
@@ -216,7 +216,7 @@ export function Experience2Section() {
         className="mx-auto max-w-screen-xl"
         variants={containerVariants}
         initial="hidden"
-        animate={isInView ? 'visible' : 'hidden'}
+        animate={isInView ? "visible" : "hidden"}
       >
         <motion.h2
           className="section-heading mb-12 text-center"
@@ -229,8 +229,7 @@ export function Experience2Section() {
           className="mx-auto mb-12 max-w-2xl text-center text-lg text-zinc-700 dark:text-zinc-300"
           variants={itemVariants}
         >
-          My career journey is like a musical progression - each role building
-          on the last, creating a rich tapestry of experiences and skills.
+          Didn't know where I’d steer, Somehow ended up with a career.
         </motion.p>
 
         <motion.div
@@ -259,5 +258,5 @@ export function Experience2Section() {
         </motion.div>
       </motion.div>
     </section>
-  )
+  );
 }

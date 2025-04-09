@@ -1,44 +1,44 @@
-'use client'
-import { useScroll, useTransform, motion } from 'framer-motion'
-import React, { useEffect, useRef, useState } from 'react'
-import { Disc3 } from 'lucide-react'
-import { cn } from '@/lib/utils'
+"use client";
+import { useScroll, useTransform, motion } from "framer-motion";
+import React, { useEffect, useRef, useState } from "react";
+import { Disc3 } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 interface TimelineEntry {
-  title: string | React.ReactNode
-  content: React.ReactNode
-  tags?: string[]
+  title: string | React.ReactNode;
+  content: React.ReactNode;
+  tags?: string[];
 }
 
 export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
-  const ref = useRef<HTMLDivElement>(null)
-  const containerRef = useRef<HTMLDivElement>(null)
-  const [height, setHeight] = useState(0)
+  const ref = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [height, setHeight] = useState(0);
 
   useEffect(() => {
     if (ref.current) {
-      const rect = ref.current.getBoundingClientRect()
-      setHeight(rect.height)
+      const rect = ref.current.getBoundingClientRect();
+      setHeight(rect.height);
     }
-  }, [ref])
+  }, [ref]);
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ['start 10%', 'end 50%'],
-  })
+    offset: ["start 10%", "end 50%"],
+  });
 
-  const heightTransform = useTransform(scrollYProgress, [0, 1], [0, height])
-  const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1])
+  const heightTransform = useTransform(scrollYProgress, [0, 1], [0, height]);
+  const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
   return (
     <div className="w-full font-sans" ref={containerRef}>
       <div className="mx-auto max-w-7xl px-2 py-16 md:px-8 lg:px-10">
         <h2 className="section-heading mb-6 text-center">
-          Professional Compositions
+          Experience Snapshot
         </h2>
         <p className="mx-auto mb-12 max-w-2xl text-center text-lg text-zinc-700 dark:text-zinc-300">
-          My career journey is like a musical progression - each role building
-          on the last, creating a rich tapestry of experiences and skills.
+          Started with confusion, a mix of trial and cheer,
+          <br /> Now I’m crafting a path that’s shaped into a career.
         </p>
       </div>
 
@@ -50,7 +50,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
-            viewport={{ once: true, margin: '-100px' }}
+            viewport={{ once: true, margin: "-100px" }}
           >
             <div className="sticky top-40 z-40 flex max-w-xs flex-col items-center self-start md:w-full md:flex-row lg:max-w-sm">
               <div className="absolute left-1 flex h-10 w-10 items-center justify-center rounded-full bg-white/80 shadow-lg md:left-3 dark:bg-zinc-900/80">
@@ -58,7 +58,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                   animate={{ rotate: 360 }}
                   transition={{
                     duration: 3,
-                    ease: 'linear',
+                    ease: "linear",
                     repeat: Infinity,
                   }}
                 >
@@ -78,9 +78,9 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
               {/* Enhanced Card Design */}
               <motion.div
                 className={cn(
-                  'group relative overflow-hidden rounded-xl bg-white p-3 shadow-md transition-all duration-300 md:p-6',
-                  'hover:shadow-xl dark:bg-zinc-800/90 dark:backdrop-blur-sm',
-                  'border border-zinc-100 dark:border-zinc-700/50',
+                  "group relative overflow-hidden rounded-xl bg-white p-3 shadow-md transition-all duration-300 md:p-6",
+                  "hover:shadow-xl dark:bg-zinc-800/90 dark:backdrop-blur-sm",
+                  "border border-zinc-100 dark:border-zinc-700/50"
                 )}
                 whileHover={{ y: -5 }}
               >
@@ -117,7 +117,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
         ))}
         <div
           style={{
-            height: height + 'px',
+            height: height + "px",
           }}
           className="absolute top-0 left-6 w-[2px] overflow-hidden bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-[0%] via-neutral-200 to-transparent to-[99%] [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)] md:left-8 dark:via-zinc-700"
         >
@@ -131,5 +131,5 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
