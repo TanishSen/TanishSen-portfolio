@@ -19,13 +19,13 @@ import { cn } from "@/lib/utils";
 const dataSkills = [
   {
     category: "Languages",
-    skills: "HTML • CSS • JavaScript • TypeScript • Go • Swift",
+    skills: "HTML • CSS • JavaScript • TypeScript • Java • C",
     icon: <FileCode className="h-10 w-10" />,
     color: "from-blue-500/20 to-cyan-400/20 text-blue-500",
   },
   {
     category: "Frameworks",
-    skills: "React • Next • jQuery • Remix • TailwindCSS",
+    skills: "React • Next • Bootstrap • TailwindCSS",
     icon: <Layers className="h-10 w-10" />,
     color: "from-primary/20 to-secondary/20 text-primary",
   },
@@ -41,12 +41,12 @@ const dataSkills = [
     icon: <PenTool className="h-10 w-10" />,
     color: "from-emerald-500/20 to-teal-500/20 text-emerald-500",
   },
-  {
-    category: "Project Management",
-    skills: "Trello • Taiga",
-    icon: <ClipboardList className="h-10 w-10" />,
-    color: "from-amber-500/20 to-orange-500/20 text-amber-500",
-  },
+  // {
+  //   category: "Project Management",
+  //   skills: "Trello • Taiga",
+  //   icon: <ClipboardList className="h-10 w-10" />,
+  //   color: "from-amber-500/20 to-orange-500/20 text-amber-500",
+  // },
 ];
 
 export function SkillsSection() {
