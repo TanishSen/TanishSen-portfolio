@@ -71,7 +71,7 @@ To run this project locally, follow these steps:
 
 ## Usage
 
-- Visit the live site at [https://TanishSen.github.io/TanishSen-portfolio](https://TanishSen.github.io/TanishSen-portfolio) (update with actual URL if different)
+- Visit the live site at https://tanish-sen-portfolio.vercel.app/
 - Navigate through sections like About, Projects, Skills, and Contact to explore my work
 - For developers, fork or clone the repository to customize or use as a template for your own portfolio
 
@@ -89,10 +89,10 @@ Please ensure your changes align with the project's coding standards and include
 
 Feel free to reach out to me:
 
-- **Email**: your-email@example.com (replace with your actual email)
-- **LinkedIn**: [Your LinkedIn Profile](https://linkedin.com/in/your-profile) (replace with your actual LinkedIn)
-- **GitHub**: [@TanishSen](https://github.com/TanishSen)
-- **Portfolio**: [TanishSen Portfolio](https://TanishSen.github.io/TanishSen-portfolio) (update with actual URL)
+- **Email**: tanishsen.2520@gmail.com
+- **LinkedIn**: https://www.linkedin.com/in/tanishsen/
+- **GitHub**: https://github.com/TanishSen
+- **Portfolio**: https://tanish-sen-portfolio.vercel.app/
 
 ---
 
