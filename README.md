@@ -10,7 +10,6 @@ Welcome to the repository for my personal portfolio website! This project showca
 - [Setup and Installation](#setup-and-installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
-- [License](#license)
 - [Contact](#contact)
 
 ## About
@@ -87,12 +86,6 @@ Contributions are welcome! If you have suggestions or improvements:
 5. Open a pull request
 
 Please ensure your changes align with the project's coding standards and include relevant documentation.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-## Contact
 
 Feel free to reach out to me:
 
