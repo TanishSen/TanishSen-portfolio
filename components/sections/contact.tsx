@@ -204,7 +204,7 @@ export function ContactSection() {
               Linkedin
             </FlipLink>
             <FlipLink
-              href="https://open.spotify.com/user/212nmrqpklzmvpntgorzpavgq?si=2a79f73cbb334db6"
+              href="https://dribbble.com/TanishSen"
               icon={<Music className="h-6 w-6" />}
             >
               Dribbble

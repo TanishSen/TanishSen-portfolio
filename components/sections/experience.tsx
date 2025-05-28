@@ -5,7 +5,7 @@ import Image from "next/image";
 export function ExperienceSection() {
   const timelineData = [
     {
-      title: "MAR 2025 - PRESENT ",
+      title: "MAR 2025 - MAY 2025",
       content: (
         <div>
           <h3 className="mb-1 flex flex-col text-2xl font-medium text-zinc-800 md:flex-row md:items-baseline md:gap-2 dark:text-zinc-200">
