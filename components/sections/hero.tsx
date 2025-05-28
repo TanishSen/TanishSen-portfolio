@@ -363,7 +363,7 @@ export function HeroSection() {
                 <div className="h-full w-full overflow-hidden rounded-full shadow-2xl">
                   <div className="relative h-full w-full">
                     <Image
-                      src="/nwjns.jpeg"
+                      src="/photo.jpeg"
                       alt="Developer with headphones"
                       width={400}
                       height={400}
