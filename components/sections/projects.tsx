@@ -131,6 +131,114 @@ export function ProjectsSection() {
         </motion.h3>
 
         {/* ---projects will be added -- */}
+
+        <motion.div
+          className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
+          variants={containerVariants}
+        >
+          {projectsData.map((project) => (
+            <motion.div key={project.id} variants={itemVariants}>
+              <AnimatedCard
+                className="group hover:border-primary h-full overflow-hidden rounded-xl border border-zinc-200 bg-white shadow-sm transition-all dark:border-zinc-800 dark:bg-zinc-900"
+                glareIntensity={0.3}
+              >
+                <div
+                  className="relative h-48 w-full cursor-pointer overflow-hidden"
+                  onClick={() => openProject(project)}
+                >
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    width={400}
+                    height={200}
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                    <span className="rounded-full bg-white/20 px-4 py-2 text-white backdrop-blur-sm">
+                      View Project
+                    </span>
+                  </div>
+                </div>
+                <div className="p-4">
+                  <div className="mb-2 flex items-center justify-between">
+                    <h3 className="text-xl font-bold text-zinc-900 dark:text-zinc-100">
+                      {project.title}
+                    </h3>
+                    <a
+                      href={project.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-primary hover:text-primary-light dark:text-primary-light dark:hover:text-primary transition-colors"
+                    >
+                      <ExternalLinkIcon size={18} />
+                    </a>
+                  </div>
+                  <p className="text-zinc-700 dark:text-zinc-300">
+                    {project.description.length > 100
+                      ? `${project.description.substring(0, 100)}...`
+                      : project.description}
+                  </p>
+                </div>
+              </AnimatedCard>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        {/* Project Modal */}
+        <AnimatePresence>
+          {selectedProject && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4"
+              onClick={closeProject}
+            >
+              <motion.div
+                initial={{ scale: 0.9, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 0.9, opacity: 0 }}
+                className="relative max-h-[90vh] w-full max-w-4xl overflow-auto rounded-xl bg-white p-6 dark:bg-zinc-900"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <button
+                  className="absolute top-4 right-4 rounded-full bg-zinc-100 p-2 text-zinc-700 transition-colors hover:bg-zinc-200 dark:bg-zinc-800 dark:text-zinc-300 dark:hover:bg-zinc-700"
+                  onClick={closeProject}
+                >
+                  ✕
+                </button>
+
+                <div className="mb-6 h-64 w-full overflow-hidden rounded-xl sm:h-80">
+                  <Image
+                    src={selectedProject.image}
+                    alt={selectedProject.title}
+                    width={800}
+                    height={400}
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+
+                <h3 className="mb-2 text-2xl font-bold text-zinc-900 dark:text-zinc-100">
+                  {selectedProject.title}
+                </h3>
+                <p className="mb-6 text-zinc-700 dark:text-zinc-300">
+                  {selectedProject.description}
+                </p>
+
+                <a
+                  href={selectedProject.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-primary hover:bg-primary-light inline-flex items-center rounded-full px-6 py-3 text-white transition-colors"
+                >
+                  Visit Project
+                  <ExternalLinkIcon size={18} className="ml-2" />
+                </a>
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </motion.div>
     </section>
   );
