@@ -16,57 +16,30 @@ interface IProjectData {
 const projectsData: IProjectData[] = [
   {
     id: 1,
-    title: "Portfolio Bento",
+    title: "Pathfinding Visualizer",
     description:
-      "Landing page for SeaPhantom, an NFT project focusing on innovative and sustainable technologies. Explore the world of NFTs and peer-to-peer trading on the SeaPhantom platform.",
+      "An interactive full-stack web app for visualizing pathfinding algorithms (BFS, DFS, Dijkstra’s, A*) on a 50x25 grid. It offers real-time animations, speed controls, maze generation, and responsive design.",
     image:
-      "https://res.cloudinary.com/deselamak/image/upload/v1731132621/portofolio/rjwnyaeifqmneuflt3it.png",
-    url: "https://seaphantom.com",
+      "https://i.ibb.co/b5QrRssq/Whats-App-Image-2025-07-19-at-04-40-58.jpg",
+    url: "https://github.com/TanishSen/Pathfinding-Visualizer",
   },
   {
     id: 2,
-    title: "SeaPhantom Landing Page",
+    title: "Learn Scope",
     description:
-      "Landing page for SeaPhantom, an NFT project focusing on innovative and sustainable technologies. Explore the world of NFTs and peer-to-peer trading on the SeaPhantom platform.",
+      " LearnScope is a peer-to-peer learning platform for college students, built with React 18, TypeScript, Node.js, and PostgreSQL. It offers secure authentication, a real-time Q&A community, live help sessions, and responsive design across subjects like Computer Science and Mathematics. Ideal for collaborative learning.",
     image:
-      "https://res.cloudinary.com/deselamak/image/upload/v1699777135/portofolio/y2l1g36bjudgsf6yr0eg.webp",
-    url: "https://seaphantom.com",
+      "https://i.ibb.co/5X6tRyvW/Whats-App-Image-2025-07-19-at-04-14-16.jpg",
+    url: "https://github.com/TanishSen/Learn-Scope",
   },
   {
     id: 3,
-    title: "SeaPhantom P2P Rum Token Escrow Trading",
+    title: ".doT",
     description:
-      "Engage in NFT trading with the P2P Rum Token Escrow Trading project. This platform facilitates secure and transparent NFT transactions.",
+      "Interactive chatbot, integrated with Gemini API to deliver real-time AI responses. ",
     image:
-      "https://res.cloudinary.com/deselamak/image/upload/v1699777135/portofolio/fphb7ddemp4ixeutav1b.webp",
-    url: "https://auth.seaphantom.com/",
-  },
-  {
-    id: 4,
-    title: "Labgrownbeasts Company Profile",
-    description:
-      "Explore the Labgrownbeasts Company Profile, showcasing innovation and excellence in the field. Learn about our vision, mission, and the cutting-edge work we do.",
-    image:
-      "https://res.cloudinary.com/deselamak/image/upload/v1699777135/portofolio/mqprcb6todunicq4cg0a.webp",
-    url: "https://labgrownbeasts.com/",
-  },
-  {
-    id: 5,
-    title: "Gold Apple Token",
-    description:
-      "Explore the Labgrownbeasts Company Profile, showcasing innovation and excellence in the field. Learn about our vision, mission, and the cutting-edge work we do.",
-    image:
-      "https://res.cloudinary.com/deselamak/image/upload/v1731218154/portofolio/btj1gqvxgej1cgbqm6zf.png",
-    url: "https://labgrownbeasts.com/",
-  },
-  {
-    id: 6,
-    title: "Daily Calories Apps",
-    description:
-      "Explore the Labgrownbeasts Company Profile, showcasing innovation and excellence in the field. Learn about our vision, mission, and the cutting-edge work we do.",
-    image:
-      "https://res.cloudinary.com/deselamak/image/upload/v1731218151/portofolio/irby71t9knqrf3y5jogn.png",
-    url: "https://labgrownbeasts.com/",
+      "https://i.ibb.co/6c8wXsZ0/Whats-App-Image-2025-07-19-at-01-42-03.jpg",
+    url: "https://dot-ten.vercel.app/",
   },
 ];
 
@@ -123,12 +96,12 @@ export function ProjectsSection() {
           Digital Compositions
         </motion.h2>
 
-        <motion.h3
+        {/* <motion.h3
           className="mb-12 max-w-4xl mx-auto text-center text-lg text-zinc-700 dark:text-zinc-300"
           variants={itemVariants}
         >
           projects will be added soon...
-        </motion.h3>
+        </motion.h3> */}
 
         {/* ---projects will be added -- */}
 
