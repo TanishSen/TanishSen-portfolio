@@ -41,6 +41,15 @@ const projectsData: IProjectData[] = [
       "https://i.ibb.co/6c8wXsZ0/Whats-App-Image-2025-07-19-at-01-42-03.jpg",
     url: "https://dot-ten.vercel.app/",
   },
+  {
+    id: 4,
+    title: "InSight",
+    description:
+      "A revolutionary system that bridges accessibility gaps through AI-powered image analysis and context-aware dialogue in a voice-driven interface",
+    image:
+      "https://i.ibb.co/0RCv1Y3m/Insight.jpg",
+    url: "https://github.com/TanishSen/InSight",
+  },
 ];
 
 export function ProjectsSection() {
